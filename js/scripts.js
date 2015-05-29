@@ -15,8 +15,8 @@
 
 var replacer = function(sentence,oldWord,newWord) {
   var oldWord = new RegExp(oldWord, 'i' + 'g');
-  var new_sentence = sentence.replace(oldWord, newWord)
-  return new_sentence
+  var newSentence = sentence.replace(oldWord, newWord)
+  return newSentence
 };
 
 $(document).ready(function() {
