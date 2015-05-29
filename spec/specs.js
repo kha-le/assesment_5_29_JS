@@ -10,5 +10,4 @@ describe('replacer', function(){
   it('is not case sensitive when searching for a word', function() {
     expect(replacer('BlUe red bLue red Blue', 'blue', 'yellow')).to.equal('yellow red yellow red yellow')
   });
-
 });
