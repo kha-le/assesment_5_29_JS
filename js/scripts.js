@@ -14,7 +14,8 @@
 
 
 var replacer = function(sentence,word,newWord) {
+  var oldWord = new RegExp(word, "g");
   var text = sentence
-  var new_text = sentence.replace(word,newWord)
+  var new_text = sentence.replace(oldWord, newWord)
   return new_text
 };
