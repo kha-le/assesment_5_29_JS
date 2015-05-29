@@ -13,9 +13,24 @@
 
 
 
-var replacer = function(sentence,word,newWord) {
-  var oldWord = new RegExp(word, 'i' + 'g');
-  var text = sentence
-  var new_text = sentence.replace(oldWord, newWord)
-  return new_text
+var replacer = function(sentence,oldWord,newWord) {
+  var oldWord = new RegExp(oldWord, 'i' + 'g');
+  var new_sentence = sentence.replace(oldWord, newWord)
+  return new_sentence
 };
+
+$(document).ready(function() {
+  $("form#find-replace").submit(function(event) {
+    var sentence = $("input#sentence").val();
+    var oldWord = $("input#oldWord").val();
+    var newWord = $("input#newWord").val();
+    var result = replacer(sentence,oldWord,newWord)
+
+    $(".result").text(result);
+
+
+    $("#result").show();
+    event.preventDefault()
+
+  });
+});
